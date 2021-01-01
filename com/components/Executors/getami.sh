@@ -1,0 +1,2 @@
+#!/bin/sh
+aws ec2 describe-images --region ap-south-1 --owners amazon --filters "Name=architecture, Values=x86_64" "Name=block-device-mapping.volume-type, Values=gp2" "Name=virtualization-type, Values=hvm" "Name=description,Values=*Linux*" > amiidlist.json
